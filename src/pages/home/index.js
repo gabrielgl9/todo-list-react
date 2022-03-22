@@ -7,9 +7,10 @@ import ListTodo from "./list-todo";
 const Home = () => {
     
     const [items, setItems] = useState([]);
+    const [editIndex, setEditIndex] = useState(null);
 
     return (
-        <TodoContext.Provider value={{items, setItems}}>
+        <TodoContext.Provider value={{items, setItems, editIndex, setEditIndex}}>
             <Navbar logo="My to-do list"></Navbar>
             <Container>
                 <AddTodo></AddTodo>

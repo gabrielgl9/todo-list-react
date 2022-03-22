@@ -1,14 +1,29 @@
 import React, { useContext } from "react";
-import { List } from "../../../components";
+import { Table } from "../../../components";
 import TodoContext from "../../../providers/todo-context";
 import { ListTodoStyled } from "./styles";
 
 const ListTodo = () => {
-    const { items } = useContext(TodoContext)
+    const { items, setItems, setEditIndex } = useContext(TodoContext)
+
+    const remove = (index) => {
+        const itemsAux = [...items];
+        itemsAux.splice(index, 1);
+        setItems(itemsAux);
+    }
+
+    const edit = (index) => {
+        setEditIndex(index);
+    }
 
     return (
         <ListTodoStyled>
-            <List items={items}></List>
+            <Table 
+                headers={['#', 'Itens']} 
+                items={items} 
+                removeItem={remove} 
+                editItem={edit}>
+            </Table>
         </ListTodoStyled>
     );
 }

@@ -5,7 +5,7 @@ const Textfield = ({type, name, value, handleChange, autocomplete = "off"}) => {
 
     return (
         <TextfieldStyled>
-            <input type={type} name={name} value={value} onChange={handleChange} autocomplete={autocomplete}/>
+            <input type={type} name={name} value={value} onChange={handleChange} autoComplete={autocomplete}/>
         </TextfieldStyled>
     );
 }
