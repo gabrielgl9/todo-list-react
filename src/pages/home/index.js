@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { Navbar, Container } from "../../components";
+import { Navbar, Container, Footer } from "../../components";
 import TodoContext from "../../providers/todo-context";
 import AddTodo from "./add-todo";
 import ListTodo from "./list-todo";
@@ -16,6 +16,7 @@ const Home = () => {
                 <AddTodo></AddTodo>
                 <ListTodo></ListTodo>
             </Container>
+            <Footer></Footer>
         </TodoContext.Provider>
     );
 }
