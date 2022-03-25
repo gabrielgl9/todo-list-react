@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const NavbarStyled = styled.nav`
     height: 10vh;
-    padding: 10px;
     background: #008080;
     color: #fff;
     display: flex;

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Button, Card, Container, Footer, Textfield } from "../../components";
-import { CenterContent, Title } from "./styles";
+import { Button, Card, Container, Footer, Navbar, Textfield } from "../../components";
+import { CenterContent } from "./styles";
 import { FaUsers } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -9,7 +9,7 @@ const Login = () => {
     let navigate = useNavigate();
 
     const [state, setState] = useState({
-        login: '',
+        email: '',
         password: ''
     });
 
@@ -28,12 +28,12 @@ const Login = () => {
 
     return (
         <Container fluid>
-            <Title> My to-do List </Title>
+            <Navbar logo="My to-do list"></Navbar>
             <CenterContent>
                 <Card size={"small"}>
                     <form onSubmit={handleSubmit}>
                         <FaUsers size={70}></FaUsers>
-                        <Textfield type="text" name="login" label="Login" handleChange={handleDataForm} value={state.login} styles={{width: "80%"}}></Textfield>
+                        <Textfield type="text" name="email" label="E-mail" handleChange={handleDataForm} value={state.email} styles={{width: "80%"}}></Textfield>
                         <Textfield type="password" name="password" label="Senha" handleChange={handleDataForm} value={state.password} styles={{width: "80%"}}></Textfield>
                         <div className="links">
                             <Link to="/register"> Registre-se </Link>
