@@ -1,7 +1,7 @@
 import React from "react";
 import { ButtonStyled } from "./styles";
 
-const Button = ({type, value = '', disabled = false, clickButton, styles = {}, children}) => {
+const Button = ({type, value = '', disabled = false, clickButton = () => {}, styles = {}, children}) => {
 
     return (
         <ButtonStyled styles={styles}>

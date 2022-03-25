@@ -1,10 +1,10 @@
 import React from "react";
 import { ContainerStyled } from "./styles";
 
-const Container = ({children}) => {
+const Container = ({fluid = false, wrapper = 'default', children}) => {
 
     return (
-        <ContainerStyled>
+        <ContainerStyled fluid className={wrapper}>
             {children}
         </ContainerStyled>
     )
