@@ -6,13 +6,15 @@ import { ListTodoStyled } from "./styles";
 const ListTodo = () => {
     const { items, setItems, setEditIndex } = useContext(TodoContext)
 
-    const remove = (index) => {
+    const remove = (item) => {
         const itemsAux = [...items];
+        const index = items.indexOf(item);
         itemsAux.splice(index, 1);
         setItems(itemsAux);
     }
 
-    const edit = (index) => {
+    const edit = (item) => {
+        const index = items.indexOf(item);
         setEditIndex(index);
     }
 

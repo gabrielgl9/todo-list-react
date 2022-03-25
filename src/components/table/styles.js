@@ -4,8 +4,8 @@ export const TableStyled = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     width: 100%;
-
     .actions {
         cursor: pointer;
     }

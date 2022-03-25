@@ -4,7 +4,6 @@ import TodoContext from "../../../providers/todo-context";
 import { AddTodoStyled } from "./styles";
 
 const AddTodo = () => {
-    
     const [newItem, setNewItem] = useState('');
     const { items, setItems, editIndex, setEditIndex } = useContext(TodoContext)
 
@@ -26,7 +25,7 @@ const AddTodo = () => {
             itemsAux[editIndex] = newItem;
             setEditIndex(null)
         } else {
-            itemsAux.push(newItem);
+            itemsAux.unshift(newItem);
         }
         setItems(itemsAux);
         setNewItem('');
