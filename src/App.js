@@ -1,10 +1,9 @@
-import Home from "./pages/home";
-import Login from "./pages/login";
+import Routing from "./routes";
 
 function App() {
   return (
     <div className="App">
-      <Login></Login>
+      <Routing/>
     </div>
   );
 }
