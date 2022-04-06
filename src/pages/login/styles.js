@@ -8,10 +8,11 @@ export const CenterContent = styled.div`
     flex-direction: column;
 
     .links {
-        width: 80%;
         display: flex;
         align-items: center;
         justify-content: flex-start;
+        width: 80%;
+        padding: 10px 0;
 
         a {
             flex: 1;

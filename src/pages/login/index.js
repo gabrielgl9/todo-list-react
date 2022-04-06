@@ -23,7 +23,7 @@ const Login = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log(state)
-        navigate("/todo");
+        navigate("/home");
     }
 
     return (
@@ -39,7 +39,7 @@ const Login = () => {
                             <Link to="/register"> Registre-se </Link>
                             <Link to="/forget-password"> Esqueci minha senha </Link>
                         </div>
-                        <Button type="submit" value="Entrar" styles={{width: "60%"}}></Button>
+                        <Button type="submit" value="Entrar" styles={{width: "60%", margin: "10px 0 20px"}}></Button>
                     </form>
                 </Card>
             </CenterContent>

@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
-export const ContainerStyled = styled.div`
+export const ContainerStyled = styled.main`
     margin: 0 auto;
     max-width: ${props => props.fluid ? "100%" : "90%"};
-    min-width: ${props => props.fluid ? "100%" : "90%"};
-    // min-height: 100vh;
-    max-height: 100vh;
+    /* min-width: ${props => props.fluid ? "100%" : "90%"}; */
+    /* min-height: 100vh; */
+    /* max-height: 100vh; */
 
     &.default {
         background: none;
@@ -14,6 +14,10 @@ export const ContainerStyled = styled.div`
     &.primary {
         background: #008080;
         color: #fff;
+    }
+
+    &.secundary {
+        background: #d3d3d3;
     }
 
     form {

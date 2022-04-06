@@ -25,7 +25,7 @@ const Register = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log(state)
-        navigate("/todo");
+        navigate("/home");
     }
 
     return (
