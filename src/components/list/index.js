@@ -4,8 +4,8 @@ import { ListStyled } from "./styles";
 const List = ({items, color = '#000'}) => {
 
     return (
-        <ListStyled>
-            <ul color={color}>
+        <ListStyled color={color}>
+            <ul>
                 {items && items.map((item, index) => (
                     <li key={index}>
                         {item}
